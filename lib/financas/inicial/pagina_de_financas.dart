@@ -10,10 +10,8 @@ class PaginaDeFinancas extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SingleChildScrollView(
-        child: Column(
-          children: [saldoEmCaixa],
-        ),
+      body: Column(
+        children: [saldoEmCaixa],
       ),
     );
   }

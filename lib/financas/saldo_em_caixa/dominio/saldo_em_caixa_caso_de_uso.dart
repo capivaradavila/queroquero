@@ -14,6 +14,6 @@ enum SaldoEmCaixaStatus { ruim, razoavel, bom, muitoBom }
 final class SaldoEmCaixaCasoDeUsoImpl implements SaldoEmCaixaCasoDeUso {
   @override
   Future<SaldoEmCaixaModelo> carregaSaldo() async {
-    return const SaldoEmCaixaModelo(200, SaldoEmCaixaStatus.bom);
+    return const SaldoEmCaixaModelo(400000, SaldoEmCaixaStatus.bom);
   }
 }

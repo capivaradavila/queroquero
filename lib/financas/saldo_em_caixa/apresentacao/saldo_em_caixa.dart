@@ -40,7 +40,7 @@ class _SaldoEmCaixaState extends State<SaldoEmCaixa> {
 }
 
 class _SaldoEmCaixaValor extends StatefulWidget {
-  _SaldoEmCaixaValor(this.estado);
+  const _SaldoEmCaixaValor(this.estado);
   final SaldoEmCaixaEstadoCarregado estado;
 
   @override
@@ -58,12 +58,12 @@ class _SaldoEmCaixaValorState extends State<_SaldoEmCaixaValor> {
         children: [
           const Row(
             children: [
-              SizedBox(width: 10),
               Text(
-                'Saldo em caixa',
+                'Caixa',
                 style: TextStyle(
                   fontSize: 12,
                   fontWeight: FontWeight.bold,
+                  color: Colors.black87,
                 ),
               ),
               Spacer(),
@@ -71,20 +71,12 @@ class _SaldoEmCaixaValorState extends State<_SaldoEmCaixaValor> {
           ),
           Row(
             children: [
-              IconButton(
-                onPressed: () {
-                  setState(() {
-                    _saldoVisivel = !_saldoVisivel;
-                  });
-                },
-                icon: const Icon(Icons.remove_red_eye),
-              ),
               if (_saldoVisivel)
                 Text(
                   widget.estado.valor,
                   style: TextStyle(
                     color: _getColor(),
-                    fontSize: 20,
+                    fontSize: 34,
                   ),
                 )
               else
@@ -95,9 +87,18 @@ class _SaldoEmCaixaValorState extends State<_SaldoEmCaixaValor> {
                       Radius.circular(20),
                     ),
                   ),
-                  width: 100,
-                  height: 20,
-                )
+                  width: 170,
+                  height: 30,
+                ),
+              IconButton(
+                iconSize: 24,
+                onPressed: () {
+                  setState(() {
+                    _saldoVisivel = !_saldoVisivel;
+                  });
+                },
+                icon: const Icon(Icons.remove_red_eye),
+              ),
             ],
           ),
         ],
