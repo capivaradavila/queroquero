@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
 
-import '../dominio/saldo_em_caixa_caso_de_uso.dart';
+import '../dominio/saldo_em_caixa_modelo.dart';
 
 sealed class SaldoEmCaixaEstado extends Equatable {
   @override

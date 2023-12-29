@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../dominio/saldo_em_caixa_caso_de_uso.dart';
+import '../dominio/saldo_em_caixa_modelo.dart';
 import 'saldo_em_caixa_bloc.dart';
 import 'saldo_em_caixa_estados.dart';
 import 'saldo_em_caixa_eventos.dart';
